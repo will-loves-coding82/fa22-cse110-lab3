@@ -107,8 +107,6 @@ video{
     width: 100%;
     font-family: 'Raleway';
     margin-bottom: 20vh;
-    font-size: 2em;
-
 }
 
 .media{
@@ -124,14 +122,23 @@ video{
     gap: 15px;
     height: 60vh;
     text-align: center;
+    margin-bottom: 20vh;
 }
 
 #ideas-section {
     display: inline-block;
-    grid-template-rows: .25fr;
-    gap: 10px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20vh;
+    font-family: 'Raleway';
+    font-weight: 900;
+
+    
 }
 
+#ideas-section ol > li {
+    text-align: center;
+}
 section h3 {
     font-family: 'Raleway';
     font-size: 2em;
@@ -142,22 +149,58 @@ section h3 ~ details {
     font-weight: 900;
 }
 
-#inspiration-section {
+section h3 ~ details:hover {
+    cursor: pointer;
+}
+
+#inspiration-section{
+    text-align: center;
+}
+#inspiration-grid {
     display: grid;
     grid-template-rows: .25fr;
     grid-template-columns: .25fr .25fr .25fr .25fr;
     gap: 10px;
-    height: 75px;
     width: 100%;
+    margin-bottom: 20vh;
+    text-align: center;
 }
 
 
+#important-section{
+    display: block;
+    text-align: center;
+    margin-bottom: 20vh;
+}
+
 img {
     object-fit: cover;
+    border-radius: 10px;
     width: 100%;
     height: 100%
 }
 
 form {
     display: flex;
+    justify-content:center;
+    flex-direction: column ;
+    height: auto;
+    width: 50%;
+    margin:auto;
+    font-family: 'Raleway';
+    margin-bottom: 20vh;
+}
+
+form h3 {
+    font-size: 2em;
+    text-align: center;
+}
+
+
+#contact-section {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-family: 'Raleway';
+    margin-bottom: 20vh;
 }
