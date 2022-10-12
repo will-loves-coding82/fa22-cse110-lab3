@@ -1,4 +1,53 @@
 <!DOCTYPE html>
+
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 10vh;
+        background-color: slategray;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    header{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        height: 50vh;
+
+    }
+
+    #inspiration-section{
+        display: grid; 
+        grid-template-rows: .25fr;
+        grid-template-columns: .25fr .25fr  .25fr .25fr;
+        gap: 10px;
+        height: 75px;
+        width: 100%;
+        
+    }
+
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%
+       
+    }
+
+    form{
+        display: flex;
+    }
+
+</style>
+
+
 <html lang="en">
 
 <head>
@@ -7,6 +56,15 @@
 </head>
 
 <body>
+    <nav>
+        <a href="#about-section">About</a>
+        <a href="#comments-section">Comments from the Team</a>
+        <a href="#ideas-section">Potential Ideas</a>
+        <a href="#inspiration-section">Inspiration Board</a>
+        <a href="#important-section">Important Points</a>
+        <a href="#form-section">Feedback Form</a>
+        <a href="#contact-section">Contact</a>
+    </nav>
 
     <header>
         <h1>Fashion Team Brainstorm</h1>
@@ -19,25 +77,14 @@
             of apparel. <br>
             Please read each part carefully
         </p>
-        <nav>
-            <h2>Navigation</h2>
-            <ul>
-                <li><a href="#about-section">About</a></li>
-                <li><a href="#comments-section">Comments from the Team</a></li>
-                <li><a href="#ideas-section">Potential Ideas</a></li>
-                <li><a href="#inspiration-section">Inspiration Board</a></li>
-                <li><a href="#important-section">Important Points</a></li>
-                <li><a href="#form-section">Feedback Form</a></li>
-                <li><a href="#contact-section">Contact</a></li>
-            </ul>
-        </nav>
+
     </header>
 
 
     <main>
-        <hr>
+        
         <section id="about-section">
-            <h3>About</h3>
+            <h3>About Us</h3>
             <p> We are a team of <b>20</b> bright and talented individuals from across the globe.<br>
                 As part of our mission to create amazing clothes that go above the industry<br>
                 standards, we actively seek out the best materials, factories, suppliers, and<br>
@@ -105,16 +152,26 @@
 
         </section>
 
-
+        <h3>Inspiration</h3>
         <section id="inspiration-section">
-            <h3>Inspiration</h3>
+            
             <img alt="undercover jacket"
                 src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2016%2F09%2Fexploring-jun-takahashi-and-undercover-101.jpg?q=90&w=1400&cbr=1&fit=max">
+            
+            
             <img alt="black outfit"
                 src="https://www.designscene.net/wp-content/uploads/2020/07/Yohji-Yamamoto-pour-Homme-SS21-1.jpg">
+            
+           
+            
             <img alt="utilitarian outfit"
                 src="https://www.theskinnybeep.com/wp-content/uploads/2013/01/Catwalk-White-Mountaineering-Fall-Winter-2013-14-Men-Collection-Pitti-Uomo.jpg">
+            
 
+        
+                <img alt="utilitarian outfit"
+                    src="https://www.theskinnybeep.com/wp-content/uploads/2013/01/Catwalk-White-Mountaineering-Fall-Winter-2013-14-Men-Collection-Pitti-Uomo.jpg">
+            
         </section>
 
 
