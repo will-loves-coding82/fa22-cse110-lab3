@@ -15,11 +15,10 @@ nav {
     align-items: center;
     width: 80%;
     height: 10vh;
-    background-color: rgb(98, 167, 181);
+    background-color: rgb(129, 158, 150);
     border-radius: 5px;
     margin: auto;
     position: relative;
-   
 }
 
 
@@ -31,10 +30,9 @@ nav > a{
     color: black;
     transform: translate(0px, 3px);
     transition: color .5s, transform 0.5s ease-in;
-
 }
 
-a:hover{
+nav > a:hover{
     color: white;
     transform: translate(0px, -3px);
     transition: color .5s, transform .3s ease-out;
@@ -78,13 +76,14 @@ hr {
     margin: 20vh 0 20vh 0;
 
 }
+
 .media{
     display: flex;
     justify-content: center;
     height: 30vh;
 }
 
-video{
+video{ 
     width: 50vw;
     height: 50vh;
     margin: 20px;
@@ -132,13 +131,12 @@ video{
     margin-bottom: 20vh;
     font-family: 'Raleway';
     font-weight: 900;
-
-    
 }
 
 #ideas-section ol > li {
     text-align: center;
 }
+
 section h3 {
     font-family: 'Raleway';
     font-size: 2em;
@@ -173,11 +171,20 @@ section h3 ~ details:hover {
     margin-bottom: 20vh;
 }
 
+#important-section ~ ul {
+    font-family: 'Raleway';
+}
+
 img {
     object-fit: cover;
     border-radius: 10px;
     width: 100%;
     height: 100%
+}
+
+img:hover{
+    opacity: .8;
+    cursor: pointer;
 }
 
 form {
@@ -187,20 +194,78 @@ form {
     height: auto;
     width: 50%;
     margin:auto;
-    font-family: 'Raleway';
     margin-bottom: 20vh;
+    background-color: rgb(129, 158, 150);
+    padding: 30px;
+    border-radius: 10px;
+    font-family: 'Raleway';
+    color: white;
 }
+
 
 form h3 {
-    font-size: 2em;
     text-align: center;
+    font-size: 2em;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 
+
+input, datapst, date{
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    font-family: 'Raleway';
+    font-size: 1.1em;
+    font-weight: 900;
+}
+
+#mood-container {
+    width: 80%;
+    margin: auto;
+    background-color: red;
+}
+
+#mood-inline-block > label{
+    display:inline-block;
+ 
+}
+
+
+input[type="submit"] {
+    width: 40%;
+    margin: auto;
+    border-radius: 5px;
+    border-color: none;
+
+}
 #contact-section {
     display: inline-block;
     text-align: center;
     width: 100%;
     font-family: 'Raleway';
     margin-bottom: 20vh;
+}
+
+footer h3 {
+    font-size: 2em;
+}
+
+
+footer p {
+    color: black;
+    font-weight: 900;
+}
+
+footer p > a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
 }

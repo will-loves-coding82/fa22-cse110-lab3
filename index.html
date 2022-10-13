@@ -151,97 +151,103 @@
 
 
         <form id="form-section">
-
+        
             <h3>Feedback</h3>
+        
+            <div class = "user-info">
+                <label for="user-name">Full Name:</label>
+                <input class="input-box" type="text" id="user-name" placeholder="name">
+            </div>
 
-            
-                <label for="user-name">Full Name:</label><br>
-                <input type="text" id="user-name" placeholder="name">
+            <div class = "user-info">
+                <label for="user-email">Email:</label>
+                <input class="input-box" id="user-email" type="text" placeholder="email">
+            </div>
 
-            
+            <div class = "user-info">
+                <label for="day">Date:</label>
+                <input class="input-box" id="day" type="date">
+            </div>
 
-                <label for="user-email">Email:</label><br>
-                <input id="user-email" type="text" placeholder="email">
-              
-
-                <label for="day">Date:</label><br>
-                <input id="day" type="date">
-             
+            <div class = "user-info">
                 <label for="search-department">Select Department to Address</label>
-               
-                <input pst="department-name" name="search" id="search-department">
-
-                <datapst id="department-name">
-                    <option value="Marketing">
-                    <option value="Shipping">
-                    <option value="Design">
-                </datapst>
-              
-                <p>How Are You Feepng Today?</p>
-
-                <input type="checkbox" id="mood1" name="tired">
-                <label for="mood1">Tired</label><br>
-
+                <input class="input-box" pst="department-name" name="search" id="search-department">
+            </div>
+        
+            <datapst id="department-name">
+                <option value="Marketing">
+                <option value="Shipping">
+                <option value="Design">
+            </datapst>
+        
+        
+            <div id = "mood-container">
+                <p>How Are You Feeling Today?</p>
+        
+                <div class = "mood-inline-block">
+                    <input type="checkbox" id="mood1" name="tired">
+                    <label for="mood1">Tired</label>
+                </div>
                 <input type="checkbox" id="mood2" name="Energetic">
-                <label for="mood2">Energetic</label><br>
-
-                <input type="checkbox" id="mood3" name="upset">
-                <label for="mood3">Upset</label><br>
-
-                <input type="checkbox" id="mood4" name="happy">
-                <label for="mood4">Happy</label><br>
-
-                <input type="checkbox" id="mood5" name="Sad">
-                <label for="mood5">Sad</label><br><br>
-
-
-
-                <label for="role-select">What Is Your Current Role?</label><br>
-
-                <select name="roles" id="role-select">
-                    <option value="">--Please choose an option--</option>
-                    <option value="designer">Designer</option>
-                    <option value="manager">Manager</option>
-                    <option value="intern">Intern</option>
-
-                </select>
-                <br><br>
-
-                <p>Favorite Ice Cream Flavor? (For fun)</p>
-                <input type="radio" id="vanilla" value="vanilla">
-                <label for="vanilla">Vanilla</label>
-
-                <input type="radio" id="chocolate" value="chocolate">
-                <label for="chocolate">Chocolate</label>
-
-                <input type="radio" id="cookies" value="cookies">
-                <label for="cookies">Cookies 'n Cream</label>
-
-                <input type="radio" id="rocky-road" value="rocky-road">
-                <label for="rocky-road">Rocky Road</label>
-
-                <br>
-                <label for="other">Other</label>
-                <input type="text" id="other" value="">
-
-                <br><br>
-
-                <label for="feedback">Comments/Questions:</label><br>
-                <textarea id="feedback" rows=5 cols=22></textarea>
-
-                <br>
-
-                <input type="submit" value="Submit">
-
+                <label for="mood2">Energetic</label>
             
+                <input type="checkbox" id="mood3" name="upset">
+                <label for="mood3">Upset</label>
+            
+                <input type="checkbox" id="mood4" name="happy">
+                <label for="mood4">Happy</label>
+            
+                <input type="checkbox" id="mood5" name="Sad">
+                <label for="mood5">Sad</label>
+            </div>
+        
+        
+            <label for="role-select">What Is Your Current Role?</label><br>
+        
+            <select class="input-box" name="roles" id="role-select">
+                <option value="">--Please choose an option--</option>
+                <option value="designer">Designer</option>
+                <option value="manager">Manager</option>
+                <option value="intern">Intern</option>
+        
+            </select>
+            <br><br>
+        
+            <p>Favorite Ice Cream Flavor? (For fun)</p>
+            <input type="radio" id="vanilla" value="vanilla">
+            <label for="vanilla">Vanilla</label>
+        
+            <input type="radio" id="chocolate" value="chocolate">
+            <label for="chocolate">Chocolate</label>
+        
+            <input type="radio" id="cookies" value="cookies">
+            <label for="cookies">Cookies 'n Cream</label>
+        
+            <input type="radio" id="rocky-road" value="rocky-road">
+            <label for="rocky-road">Rocky Road</label>
+        
+            <br>
+            <label for="other">Other</label>
+            <input type="text" id="other" value="">
+        
+            <br><br>
+        
+            <label for="feedback">Comments/Questions:</label><br>
+            <textarea class="input-box" id="feedback" rows=5 cols=22></textarea>
+        
+            <br>
+        
+            <input type="submit" value="Submit">
+        
+        
         </form>
 
 
 
         <footer id="contact-section">
             <h3>Contact Info</h3>
-            <p>Email:<a href="mailto:wakim@ucsd.edu">wakim@ucsd.edu</a></p>
-            <p>Phone Number:<a href="tel:8188880000">8188880000</a></p>
+            <p>Email: <a href="mailto:wakim@ucsd.edu">wakim@ucsd.edu</a></p>
+            <p>Phone Number: <a href="tel:8188880000">8188880000</a></p>
         </footer>
 
     </main>
