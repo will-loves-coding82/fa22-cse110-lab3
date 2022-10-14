@@ -57,7 +57,10 @@
 
         <section id = "Founder-Statement">
             <h3>A word from our founder</h3>
-            <video controls><source src = "/videos/virgil.mp4" type = "video/mp4"></video>
+            <video controls src = "videos/virgil.mp4" >
+                
+
+            </video>
         
         </section>
 
@@ -131,20 +134,18 @@
 
         
                 <img alt="utiptarian outfit"
-                    src="https://www.theskinnybeep.com/wp-content/uploads/2013/01/Catwalk-White-Mountaineering-Fall-Winter-2013-14-Men-Collection-Pitti-Uomo.jpg">
+                    src="https://fuckingyoung.es/wp-content/uploads/2019/12/Gucci-Pre-Fall-2020-Lookbook_fy2.jpg">
             </div>
         </section>
 
 
         <section id="important-section">
             <h3>Important Points</h3>
-            <ul>
+            <div>
                 <p>Workshops Begin Next Saturday at 8:00 am</p>
                 <p>Get prototypes out by next month</p>
                 <p>Research on materials</p>
-
-
-            </ul>
+            </div>
         </section>
 
 
@@ -154,6 +155,7 @@
         
             <h3>Feedback</h3>
         
+            
             <div class = "user-info">
                 <label for="user-name">Full Name:</label>
                 <input class="input-box" type="text" id="user-name" placeholder="name">
@@ -164,79 +166,99 @@
                 <input class="input-box" id="user-email" type="text" placeholder="email">
             </div>
 
-            <div class = "user-info">
+            <div class="user-info">
                 <label for="day">Date:</label>
                 <input class="input-box" id="day" type="date">
             </div>
-
-            <div class = "user-info">
-                <label for="search-department">Select Department to Address</label>
-                <input class="input-box" pst="department-name" name="search" id="search-department">
-            </div>
         
+            <div class = "user-info">
+            <label for="search-department">Select Department to Address</label>
+            <input class="input-box" pst="department-name" name="search" id="search-department">
+            </div>
+            
             <datapst id="department-name">
                 <option value="Marketing">
                 <option value="Shipping">
                 <option value="Design">
             </datapst>
-        
-        
-            <div id = "mood-container">
+            
+            
+            <div id="mood-container">
                 <p>How Are You Feeling Today?</p>
-        
-                <div class = "mood-inline-block">
+            
+                <div class = "mood-inline">
                     <input type="checkbox" id="mood1" name="tired">
-                    <label for="mood1">Tired</label>
+                    <label for="mood1"> Tired</label>
                 </div>
-                <input type="checkbox" id="mood2" name="Energetic">
-                <label for="mood2">Energetic</label>
             
-                <input type="checkbox" id="mood3" name="upset">
-                <label for="mood3">Upset</label>
+                <div class = "mood-inline">
+                    <input type="checkbox" id="mood2" name="Energetic">
+                    <label for="mood2">Energetic</label>
+                </div>
             
-                <input type="checkbox" id="mood4" name="happy">
-                <label for="mood4">Happy</label>
+                <div class = "mood-inline">
+                    <input type="checkbox" id="mood3" name="upset">
+                    <label for="mood3">Upset</label>
+                </div>
             
-                <input type="checkbox" id="mood5" name="Sad">
-                <label for="mood5">Sad</label>
+                <div class = "mood-inline">
+                    <input type="checkbox" id="mood4" name="happy">
+                    <label for="mood4">Happy</label>
+                </div>
+            
+                <div class = "mood-inline">   
+                    <input type="checkbox" id="mood5" name="Sad">
+                    <label for="mood5">Sad</label>
+                </div>
             </div>
         
         
-            <label for="role-select">What Is Your Current Role?</label><br>
-        
-            <select class="input-box" name="roles" id="role-select">
-                <option value="">--Please choose an option--</option>
-                <option value="designer">Designer</option>
-                <option value="manager">Manager</option>
-                <option value="intern">Intern</option>
-        
-            </select>
+            <div id = "role-container">
+                <label for="role-select">What Is Your Current Role?</label><br>
+            
+                <select class="input-box" name="roles" id="role-select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="designer">Designer</option>
+                    <option value="manager">Manager</option>
+                    <option value="intern">Intern</option>
+            
+                </select>
+            </div>
            
         
-            <div id = "icecreame-container">
-            <p>Favorite Ice Cream Flavor? (For fun)</p>
-            <input type="radio" id="vanilla" value="vanilla">
-            <label for="vanilla">Vanilla</label>
-        
-            <input type="radio" id="chocolate" value="chocolate">
-            <label for="chocolate">Chocolate</label>
-        
-            <input type="radio" id="cookies" value="cookies">
-            <label for="cookies">Cookies 'n Cream</label>
-        
-            <input type="radio" id="rocky-road" value="rocky-road">
-            <label for="rocky-road">Rocky Road</label>
-        
-       
-            <label for="other">Other</label>
-            <input type="text" id="other" value="">
-        
-        
-        
-            <label for="feedback">Comments/Questions:</label><br>
-            <textarea class="input-box" id="feedback" rows=5 cols=22></textarea>
-        
+            <div id="icecream-container">
+                <p>Favorite Ice Cream Flavor? (For fun)</p>
+                <div class="icecream-inline">
+                    <input type="radio" id="vanilla" value="vanilla">
+                    <label for="vanilla">Vanilla</label>
+                </div>
+            
+                <div class="icecream-inline">
+            
+                    <input type="radio" id="chocolate" value="chocolate">
+                    <label for="chocolate">Chocolate</label>
+                </div>
+            
+                <div class="icecream-inline">
+            
+                    <input type="radio" id="cookies" value="cookies">
+                    <label for="cookies">Cookies 'n Cream</label>
+                </div>
+            
+                <div class="icecream-inline">
+                    <input type="radio" id="rocky-road" value="rocky-road">
+                    <label for="rocky-road">Rocky Road</label>
+                </div>
+            
+                <label for="other">Other</label>
+                <input type="text" id="other" value="">
             </div>
+        
+            <div id = "comments-container">
+                <label for="feedback">Comments/Questions:</label><br>
+                <textarea class="input-box" id="feedback" placeholder = "type something"></textarea>
+            </div>
+            
         
             <input type="submit" value="Submit">
         
