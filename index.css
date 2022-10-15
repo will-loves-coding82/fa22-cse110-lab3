@@ -1,14 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
-
-body{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -23,7 +12,6 @@ nav {
 
 
 nav > a{
-    text-decoration: none;
     font-weight: 900;
     font-family: 'Raleway';
     display: inline;
@@ -57,10 +45,7 @@ header {
 }
 
 #Title-Description{
-    font-family: 'Raleway';
     font-weight: 800;
-    width: 80%;
-    margin:auto;
     transform: translateY(-10vh);
 }
 
@@ -68,20 +53,31 @@ hr {
     width: 80vw;
 }
 
+h3 + p {
+    font-family: 'Raleway';
+    width: 80%;
+    margin:auto;
+    text-align: center;
+}
+
 #about-section{
     display:inline-block;
     text-align: center;
     width: 100%;
-    font-family: 'Raleway';
     margin: 20vh 0 20vh 0;
 
 }
 
-.media{
-    display: flex;
-    justify-content: center;
-    height: 30vh;
+#Founder-Statement{
+    display:inline-block;
+    text-align: center;
+    width: 100%;
+    font-family: 'Raleway';
+    margin-bottom: 6pc;
+    margin-left: auto;
+    margin-right:auto;
 }
+
 
 video{ 
     width: 60vw;
@@ -89,6 +85,7 @@ video{
     margin: 0 0 1in 0;
     border-radius: 5px;
     border-color:none; 
+
     
 }
 
@@ -101,19 +98,7 @@ video{
     font-weight: 600;
 }
 
-#Founder-Statement{
-    display:inline;
-    text-align: center;
-    width: 100%;
-    font-family: 'Raleway';
-    margin-bottom: 6pc;
-}
 
-.media{
-    display:inline-block;
-    margin: 10px;
-
-}
 
 #comments-section{
     display: grid;
@@ -192,10 +177,7 @@ section h3 ~ details:hover {
 
 #important-section ul > li {
     text-align: center;
-    margin: 10px;
-    text-decoration: none;
-    
-    
+    margin: 10px
 }
 
 img {
@@ -234,7 +216,7 @@ form h3 {
     font-size: 2em;
 }
 
-.user-info {
+div.user-info {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -338,7 +320,42 @@ footer p {
 }
 
 footer p > a {
-    text-decoration: none;
     color: black;
     font-weight: 900;
+}
+
+
+
+@media (max-width: 1200px){
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    nav > a {
+        font-size: .8em;
+    }
+}
+@media (max-width: 900px){
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    nav > a {
+        font-size: .7em;
+    }
+
+ 
+}
+
+@media (max-width: 600px){
+  #Title{
+    font-size: 4em;
+    margin-top: 10vh;
+  }
+
+  h3 +p {
+    font-size: .8em;
+  }
+ 
 }
