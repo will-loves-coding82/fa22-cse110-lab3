@@ -10,16 +10,18 @@ nav {
     position: relative;
 }
 
-
+/*Select all children <a> in the nav*/
 nav > a{
     font-weight: 900;
     font-family: 'Raleway';
     display: inline;
     color: #ffff;
     transform: translate(0px, 2px);
+    /* this is important when we want it to return to original position after hover*/
     transition: color .5s, transform 0.5s ease-in;
 }
 
+/* Translate the links up and then down */
 nav > a:hover{
     color: hsl(188, 97%, 28%);
     transform: translate(0px, -2px);
@@ -53,6 +55,7 @@ hr {
     width: 80vw;
 }
 
+/* Select p elements that are preceded by h3 */
 h3 + p {
     font-family: 'Raleway';
     width: 80%;
@@ -85,8 +88,6 @@ video{
     margin: 0 0 1in 0;
     border-radius: 5px;
     border-color:none; 
-
-    
 }
 
 #about-section h3{
@@ -97,8 +98,6 @@ video{
     font-size: 1em;
     font-weight: 600;
 }
-
-
 
 #comments-section{
     display: grid;
@@ -119,8 +118,28 @@ video{
     font-weight: 900;
 }
 
-#ideas-section ol > li {
+/*this combinator selects <p> with the succeeding class*/
+p.float-animation {
     text-align: center;
+}
+
+/*on hover we trigger the animation to play*/
+p.float-animation:hover{
+    animation: float-left .3s ease-in-out;
+    cursor: default;
+}
+
+/* horizontal translate animation*/
+@keyframes float-left{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(-5px);
+    }
 }
 
 section h3 {
@@ -128,10 +147,12 @@ section h3 {
     font-size: 2em;
 }
 
+/* Select details elements that are siblings with an h3 element*/
 section h3 ~ details {
     font-family: 'Raleway';
     font-weight: 900;
 }
+
 
 section h3 ~ details:hover {
     cursor: pointer;
@@ -140,6 +161,8 @@ section h3 ~ details:hover {
 #inspiration-section, #important-section{
     text-align: center;
 }
+
+/*The grid of photos will be 1 row by 4 columns*/
 #inspiration-grid {
     display: grid;
     grid-template-rows: .25fr;
@@ -192,6 +215,7 @@ img:hover{
     cursor: pointer;
 }
 
+
 form {
     display: flex;
     justify-content:center;
@@ -200,7 +224,9 @@ form {
     width: 50%;
     margin:auto;
     margin-bottom: 20vh;
-    background-color: rgb(129, 158, 150);
+
+    /*padding defines the width of negative space of 
+    content inside a container */
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 30px;
@@ -208,6 +234,9 @@ form {
     border-radius: 10px;
     font-family: 'Raleway';
     color: white;
+    background-color: rgb(129, 158, 150);
+    
+
 }
 
 
@@ -225,28 +254,32 @@ div.user-info {
 }
 
 
-input, datapst, date{
+input, datalist{
     width: 100%;
     height: 25px;
     border-radius: 5px;
     border:none;
     font-family: 'Raleway';
     font-size: 1.1em;
-    font-weight: 900;
+
+    /* this shorthand defines padding for top, right, bottom, and left */
     padding: 2px 2px 2px 5px;
 }
 
 #mood-container, #icecream-container{
-  height: 250px;
-  width: 80%;
-  margin: 0 auto 20px auto;
-  
+    height: 250px;
+    width: 80%;
+
+    /* this shorthand defines margin for top, right, bottom, and left */
+    /* auto keeps the content centered horizontally */
+    margin: 0 auto 20px auto;
 }
 
 .mood-inline, .icecream-inline {
     margin: 20px 0 20px 0;
 }
 
+/* select inputs of both checkbox and radio types */
 input[type= "checkbox"], input[type="radio"]{
     display:inline-block;  
     width: 24px;
@@ -268,8 +301,8 @@ input[type= "checkbox"], input[type="radio"]{
     border-radius: 5px;
     font-size: 1.1em;
     font-family: 'Raleway';
-    font-weight: 900;
 }
+
 textarea{
     font-family: 'Raleway';
     font-weight: 900;
@@ -280,9 +313,13 @@ textarea{
     margin: 40px auto 20px auto;
 }
 
+
 #comments-container textarea{
     max-width: 100%;
     min-width: 50%;
+
+    /* limit the width and height that user can stretch
+    the text area of the comments/question in form */
     max-height: 300px;
     min-height: 100px;
     border-radius: 5px;
@@ -325,17 +362,27 @@ footer p > a {
 }
 
 
-
+/* Media Queries for responsiveness */
 @media (max-width: 1200px){
+
+    /* Flex wrap allows content to move to a new line if 
+    the width becomes too small */
     nav {
         display: flex;
         flex-wrap: wrap;
     }
+
+    /* decrease font size to allow for readability and
+    to prevent text overlap */
     nav > a {
         font-size: .8em;
     }
 }
+
+
 @media (max-width: 900px){
+
+
     nav {
         display: flex;
         flex-wrap: wrap;
@@ -352,10 +399,15 @@ footer p > a {
   #Title{
     font-size: 4em;
     margin-top: 10vh;
+    margin-bottom: 15vh;
   }
 
-  h3 +p {
+  /* reduce font size of descriptive text to 
+  maintain proportions*/
+  #Title-Description, #about-section, 
+  details, p.float-animation, #important-section div > p {
     font-size: .8em;
   }
  
+
 }
