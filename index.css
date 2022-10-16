@@ -17,7 +17,7 @@ nav > a{
     display: inline;
     color: #ffff;
     transform: translate(0px, 2px);
-    /* this is important when we want it to return to original position after hover*/
+    /* For returning to original position after hover*/
     transition: color .5s, transform 0.5s ease-in;
 }
 
@@ -51,6 +51,7 @@ header {
     transform: translateY(-10vh);
 }
 
+/* setting horizontal line width */
 hr {
     width: 80vw;
 }
@@ -109,6 +110,7 @@ video{
     margin-bottom: 20vh;
 }
 
+
 #ideas-section {
     display: inline-block;
     text-align: center;
@@ -125,6 +127,8 @@ p.float-animation {
 
 /*on hover we trigger the animation to play*/
 p.float-animation:hover{
+
+    /* What animation to play, how long, and the transition style*/
     animation: float-left .3s ease-in-out;
     cursor: default;
 }
@@ -134,9 +138,11 @@ p.float-animation:hover{
     0%{
         transform: translateX(0);
     }
+    /*move content to the right */
     50%{
         transform: translateX(5px);
     }
+    /*move it back to original position */
     100%{
         transform: translateX(-5px);
     }
@@ -147,16 +153,24 @@ section h3 {
     font-size: 2em;
 }
 
-/* Select details elements that are siblings with an h3 element*/
+/* Select <details> that are siblings with <h3>*/
 section h3 ~ details {
     font-family: 'Raleway';
     font-weight: 900;
 }
 
-
-section h3 ~ details:hover {
-    cursor: pointer;
+section h3 ~ details{
+    transform: translateY(3px);
+    transition: transform .1s ease-in-out;
 }
+
+/* move <details> down and up on hover */
+section h3 ~ details:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    transition: transform .1s ease-in-out;
+}
+
 
 #inspiration-section, #important-section{
     text-align: center;
@@ -173,6 +187,28 @@ section h3 ~ details:hover {
     text-align: center;
 }
 
+
+img {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    box-shadow: black 5px;
+}
+
+/*scale the images when hovering for responsiveness*/
+img:hover{
+    opacity: .8;
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: transform .1s ease-in-out;
+}
+
+/*When use clicks & holds img, scale it larger */
+img:active{
+    opacity: 1;
+    transform: scale(1.2);
+}
 
 #important-section {
     display:flex;
@@ -203,18 +239,6 @@ section h3 ~ details:hover {
     margin: 10px
 }
 
-img {
-    object-fit: cover;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%
-}
-
-img:hover{
-    opacity: .8;
-    cursor: pointer;
-}
-
 
 form {
     display: flex;
@@ -235,8 +259,6 @@ form {
     font-family: 'Raleway';
     color: white;
     background-color: rgb(129, 158, 150);
-    
-
 }
 
 
